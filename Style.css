@@ -1,0 +1,36 @@
+ /* * {
+            border: 1px solid black;
+        } */
+
+        nav {
+            background-color: deepskyblue;
+        }
+        .text-center {
+            justify-content: center;
+            padding-top: 25px; 
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section {
+            background-color: rgb(200,250,255);
+        }
+
+        main {
+            background-color: green;
+        }
+
+        main .main-container {
+            margin: 2%;
+            /* border: 1px solid silver; */
+            height: 1000px;
+        }
+
+        .content-card {
+            margin: 5%;
+            background-color:  rgb(255, 255, 170);
+            border: 1px solid rgb(255, 255, 170);
+            border-radius: 10px;
+        }
