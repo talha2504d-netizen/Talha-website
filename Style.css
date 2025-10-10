@@ -1,0 +1,37 @@
+.container{
+            
+            margin-top: 12px;
+            padding: 3px;
+            text-align: center;
+            width: 1550px;
+            color: teal;
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+            /* nav{
+                margin-left: 20%;
+                height: 25px;
+            } */
+
+        a{
+            text-align: center;
+            margin: 20px;
+        }
+
+        img{
+            border: 6px solid purple;
+            width: 200px;
+            height: 250px;
+        }
+        h1{
+            color: aqua;
+            background-color: navy;
+            font-weight: bold;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border: 8px solid orangered;
+        }
+        body{
+          background-color: crimson;
+        }
+        
