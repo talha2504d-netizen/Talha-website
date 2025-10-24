@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <script src="C:\Talha.jQuery\jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            position: fixed;
+        }
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button>Press to start Animation</button>
+
+    <button id="btn2">stop Animation</button>
+    <div>Some Text</div>
+
+    <img src="C:\Talha.jQuery\download (5).jpg" width="200px">
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function(){
+                var div = $('div')
+                div.animate({left: '500px',height: '350px',width: '350px',fontSize: '350px'}, 3000);
+                div.animate({right: '150px',height: '30px',width: '350px',fontSize: '350px'}, 3000);
+                div.animate({left: '100px',height: '350px',width: '350px',fontSize: '40px'}, 3000);
+            });
+        });
+
+        // if you want to stop your animation 
+        $("#btn2").click(function(){
+            $('div').stop(false,true);
+        });
+        
+        </script>
+</body>
+</html>

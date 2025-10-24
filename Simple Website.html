@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinix Mobile Store - Simple Template</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery (for simplicity as requested) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    /* Simple custom styling kept minimal for beginner */
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    /* Top small bar */
+    .top-bar { background: lime; font-size: 0.9rem; }
+    .top-bar a { color: yellow; text-decoration: none; }
+
+    /* Hero section */
+    .hero {
+      height: 88vh; /* nearly fills the screen */
+      min-height: 520px;
+      background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: aqua;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .free-delivery-text {
+        font-style: italic;
+        /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    }
+    .hero .overlay { position: absolute; inset:0; background: rgba(0,0,0,0.25); }
+    .hero .hero-content { position: relative; z-index: 2; text-align: center; }
+
+    /* Black bar under hero to signal end */
+    .hero-end { height: 16px; background: #47d110;}
+
+    /* Cards section */
+    .product-card img { height: 180px; object-fit: cover; width: 100%; border-radius: .25rem; }
+    .product-card { transition: transform .18s ease; }
+    .product-card:hover { transform: translateY(-6px); }
+
+    /* Last card highlight */
+    .highlight { border: 2px solid #08adad; box-shadow: 0 6px 18px rgba(13,110,253,0.12); }
+
+    /* Centered big heading */
+    .big-heading { padding: 4rem 1rem; text-align: center; }
+
+    /* Footer large */
+    .site-footer { background:silver; color:orangered; padding: 3rem 1rem; font-style: italic; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+    .site-footer a { color: black; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* Responsive tweaks */
+    @media (max-width: 576px) {
+      .hero { height: 64vh; }
+      .product-card img { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top small bar: simple contact / utility bar -->
+  <div class="top-bar py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="free-delivery-text">Free delivery on orders over <strong>PKR 15,000</strong></div>
+      <div>Call us: <a href="tel:+923001234567">+92 300 1234567</a></div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Infinix Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero big image that nearly fills the screen -->
+  <header id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+      <h1 class="display-5">Welcome to the Infinix Mobile Store</h1>
+      <p class="lead">Simple mobile store template — images, short descriptions, and easy ordering.</p>
+      <a href="#products" class="btn btn-primary btn-lg mt-3">See Mobiles</a>
+    </div>
+  </header>
+
+  <!-- Black bar signaling the end of front area -->
+  <div class="hero-end"></div>
+
+  <!-- Cards and text sections -->
+  <section id="products" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img src="C:\Talha.jQuery\Talha bootstrap\download (1).jpg" class="card-img-top" alt="Infinix Mobile 1">
+            <div class="card-body">
+              <h5 class="card-title">Infinix Note 40</h5>
+              <p class="card-text">Silver bar filler text — 6.7" display, 5000mAh battery.</p>
+              <a href="#order" class="btn btn-outline-primary">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100">
+            <img src="C:\Talha.jQuery\Talha bootstrap\download (2).jpg" class="card-img-top" alt="Infinix Mobile 2">
+            <div class="card-body">
+              <h5 class="card-title">Infinix Note 50</h5>
+              <p class="card-text">Silver bar filler text — powerful chipset, good camera for the price.</p>
+              <a href="#order" class="btn btn-outline-primary">Order</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 (last in this row) - must be highlighted to signal the end of that section -->
+        <div class="col-md-4">
+          <div class="card product-card h-100 highlight">
+            <img src="C:\Talha.jQuery\Talha bootstrap\download (4).jpg" class="card-img-top" alt="Infinix Mobile 3">
+            <div class="card-body">
+              <h5 class="card-title">Infinix Note 7</h5>
+              <p class="card-text">Highlighted end card — limited edition color, slightly higher specs.</p>
+              <a href="#order" class="btn btn-primary">Order Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Another row with mixed card + text sections as the user described -->
+      <div class="row mt-5 g-4">
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Why choose Infinix?</h5>
+              <p class="card-text">Silver bar filler text — reliable battery, value for money, and sleek design.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Fast Delivery</h5>
+              <p class="card-text">Silver bar filler text — delivery across Pakistan within 3-5 business days.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Warranty & Support</h5>
+              <p class="card-text">Silver bar filler text — official guarantee and local service centers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Big centered heading and some text below it -->
+  <section class="big-heading">
+    <div class="container">
+      <h2>All Infinix Mobiles</h2>
+      <p class="lead">Browse the collection — each product has a short description and image. Click Order to place your request.</p>
+    </div>
+  </section>
+
+  <!-- Simple Order section -->
+  <section id="order" class="py-5 bg-light">
+    <div class="container">
+      <h3>Place an Order</h3>
+      <p>Fill the form below and we'll contact you to confirm.</p>
+      <form id="orderForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="name" class="form-label">Your name</label>
+          <input type="text" class="form-control" id="name" placeholder="e.g. Talha" required>
+        </div>
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone</label>
+          <input type="tel" class="form-control" id="phone" placeholder="0336-3470991" required>
+        </div>
+        <div class="col-md-6">
+          <label for="productSelect" class="form-label">Product</label>
+          <select id="productSelect" class="form-select">
+            <option>Infinix Note 40</option>
+            <option>Infinix Note 50</option>
+            <option>Infinix Note 7</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="quantity" class="form-label">Quantity</label>
+          <input type="number" class="form-control" id="quantity" min="1" value="1">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Send Order</button>
+          <span id="orderMsg" class="ms-3 text-success" style="display:none;">Order submitted (demo).</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Large Footer with many clickable link sections -->
+  <footer class="site-footer mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Products</h5>
+          <ul class="list-unstyled">
+            <li><a href="#products">All Mobiles</a></li>
+            <li><a href="#products">New Arrivals</a></li>
+            <li><a href="#products">Best Sellers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled">
+            <li><a href="tel:+923001234567">+92 300 1234567</a></li>
+            <li><a href="mailto:info@infinixstore.example">info@infinixstore.example</a></li>
+            <li><a href="#">Live Chat</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12 text-center small">&copy; <span id="year"></span> Infinix Store. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small script to handle demo order form
+    $(function(){
+      $('#orderForm').on('submit', function(e){
+        e.preventDefault();
+        // show a simple message (no backend here)
+        $('#orderMsg').fadeIn().delay(2000).fadeOut();
+        // clear form for demo
+        $(this).trigger('reset');
+      });
+      // put current year in footer
+      $('#year').text(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>

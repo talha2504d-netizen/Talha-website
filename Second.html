@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C:\Talha.jQuery\jquery-3.7.1.min.js"></script>
+    <style>
+        #panel{
+            width: 300px;
+            padding: 20px;
+            background-color: cyan;
+
+            margin-top: 10px;
+        }
+        button{
+            margin: 5px;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+<button id="Slidedown">Slide Down</button>
+<button id="SlideUp">Slide Up</button>
+<button id="SlideToggle">Slide Toggle</button>
+
+
+<div id="panel">
+    <h1>Hello , I am a sliding panel.</h1>
+    <p>This box can slide in , up , down and toggle using jquery.</p>
+</div>
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#SlideDown").click(function() {
+            $("div").slideDown();
+        });
+    })
+    $("#SlideUp").click(function() {
+            $("div").slideUp();
+        });
+    $("#SlideToggle").click(function() {
+            $("div").slideToggle();
+        });
+    
+</script>
+
+</body>
+</html>
